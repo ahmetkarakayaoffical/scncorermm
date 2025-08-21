@@ -1,0 +1,48 @@
+﻿@using System.Security.Claims
+
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+@inject IDialogService DialogService
+
+<MudDialog>
+    <DialogContent>
+        <MudTextField @bind-Value="FirstInput" Label="Report reason" Variant="Variant.Filled" Immediate="true"/>
+
+        @if (String.IsNullOrEmpty(FirstInput))
+        {        
+            <MudText Class="mt-2">Please provide a reason for reporting this content. This will help us take appropriate action.</MudText>
+        }
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="@Cancel" Color="Color.Default" Size="Size.Small">Cancel</MudButton>
+        <MudButton OnClick="@Submit" Color="Color.Error" Variant="Variant.Filled" Size="Size.Small" Disabled="@(String.IsNullOrEmpty(FirstInput))">Report</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] IMudDialogInstance MudDialog { get; set; }
+    public string FirstInput { get; set; } = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Get the current user from the authentication state
+        var user = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User;
+
+        // Check if user is authenticated
+        if (user?.Identity is not { IsAuthenticated: true })
+        {
+            NavigationManager.NavigateTo("/login", true);
+            return;
+        }
+    }
+
+    void Submit()
+    {
+        MudDialog.Close(DialogResult.Ok(FirstInput));
+    }
+
+    void Cancel()
+    {
+        MudDialog.Cancel();
+    }
+}

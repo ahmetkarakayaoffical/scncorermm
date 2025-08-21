@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="add" xml:space="preserve">
+    <value />
+  </data>
+  <data name="agent_version" xml:space="preserve">
+    <value />
+  </data>
+  <data name="all_devices" xml:space="preserve">
+    <value />
+  </data>
+  <data name="antivirus_information_amengineversion" xml:space="preserve">
+    <value />
+  </data>
+  <data name="antivirus_information_amproductversion" xml:space="preserve">
+    <value />
+  </data>
+  <data name="antivirus_information_amserviceenabled" xml:space="preserve">
+    <value />
+  </data>
+  <data name="antivirus_information_amserviceversion" xml:space="preserve">
+    <value />
+  </data>
+  <data name="antivirus_information_antispywaresignaturelastupdated" xml:space="preserve">
+    <value />
+  </data>
+  <data name="antivirus_information_antispywaresignatureversion" xml:space="preserve">
+    <value />
+  </data>
+  <data name="antivirus_information_antivirussignaturelastupdated" xml:space="preserve">
+    <value />
+  </data>
+  <data name="antivirus_information_antivirussignatureversion" xml:space="preserve">
+    <value />
+  </data>
+  <data name="antivirus_information_nis" xml:space="preserve">
+    <value />
+  </data>
+  <data name="antivirus_information_nisengineversion" xml:space="preserve">
+    <value />
+  </data>
+  <data name="antivirus_information_nissignaturelastupdated" xml:space="preserve">
+    <value />
+  </data>
+  <data name="antivirus_information_nissignatureversion" xml:space="preserve">
+    <value />
+  </data>
+  <data name="antivirus_products" xml:space="preserve">
+    <value />
+  </data>
+  <data name="antivirus_solution" xml:space="preserve">
+    <value />
+  </data>
+  <data name="any" xml:space="preserve">
+    <value />
+  </data>
+  <data name="architecture" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Are you sure you want to delete the directory?" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Are you sure you want to delete the file?" xml:space="preserve">
+    <value />
+  </data>
+  <data name="author" xml:space="preserve">
+    <value />
+  </data>
+  <data name="authorize_device" xml:space="preserve">
+    <value />
+  </data>
+  <data name="back" xml:space="preserve">
+    <value />
+  </data>
+  <data name="base_clock_speed_mhz" xml:space="preserve">
+    <value />
+  </data>
+  <data name="behavior_monitoring" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value />
+  </data>
+  <data name="capacity_gb" xml:space="preserve">
+    <value />
+  </data>
+  <data name="category" xml:space="preserve">
+    <value />
+  </data>
+  <data name="command" xml:space="preserve">
+    <value />
+  </data>
+  <data name="confirm" xml:space="preserve">
+    <value />
+  </data>
+  <data name="connect" xml:space="preserve">
+    <value />
+  </data>
+  <data name="connection_type" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cores" xml:space="preserve">
+    <value />
+  </data>
+  <data name="created" xml:space="preserve">
+    <value />
+  </data>
+  <data name="critical" xml:space="preserve">
+    <value />
+  </data>
+  <data name="date" xml:space="preserve">
+    <value />
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value />
+  </data>
+  <data name="delete_device" xml:space="preserve">
+    <value />
+  </data>
+  <data name="description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="devices" xml:space="preserve">
+    <value />
+  </data>
+  <data name="device_authorized" xml:space="preserve">
+    <value />
+  </data>
+  <data name="device_deleted" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dhcp_enabled" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dhcp_server" xml:space="preserve">
+    <value />
+  </data>
+  <data name="directory" xml:space="preserve">
+    <value />
+  </data>
+  <data name="disabled" xml:space="preserve">
+    <value />
+  </data>
+  <data name="display_name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dns_domain" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dns_hostname" xml:space="preserve">
+    <value />
+  </data>
+  <data name="domain" xml:space="preserve">
+    <value />
+  </data>
+  <data name="drive" xml:space="preserve">
+    <value />
+  </data>
+  <data name="drivers" xml:space="preserve">
+    <value />
+  </data>
+  <data name="drives" xml:space="preserve">
+    <value />
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="enabled" xml:space="preserve">
+    <value />
+  </data>
+  <data name="events" xml:space="preserve">
+    <value />
+  </data>
+  <data name="execute" xml:space="preserve">
+    <value />
+  </data>
+  <data name="exit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="export_data" xml:space="preserve">
+    <value />
+  </data>
+  <data name="external_ip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="file_browser" xml:space="preserve">
+    <value />
+  </data>
+  <data name="file_system" xml:space="preserve">
+    <value />
+  </data>
+  <data name="firewall" xml:space="preserve">
+    <value />
+  </data>
+  <data name="firewall_disabled" xml:space="preserve">
+    <value />
+  </data>
+  <data name="firewall_enabled" xml:space="preserve">
+    <value />
+  </data>
+  <data name="firmware_revision" xml:space="preserve">
+    <value />
+  </data>
+  <data name="form_factor" xml:space="preserve">
+    <value />
+  </data>
+  <data name="free" xml:space="preserve">
+    <value />
+  </data>
+  <data name="general" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gpu" xml:space="preserve">
+    <value />
+  </data>
+  <data name="group" xml:space="preserve">
+    <value />
+  </data>
+  <data name="high" xml:space="preserve">
+    <value />
+  </data>
+  <data name="history" xml:space="preserve">
+    <value />
+  </data>
+  <data name="information" xml:space="preserve">
+    <value />
+  </data>
+  <data name="input" xml:space="preserve">
+    <value />
+  </data>
+  <data name="installation_date" xml:space="preserve">
+    <value />
+  </data>
+  <data name="installation_path" xml:space="preserve">
+    <value />
+  </data>
+  <data name="installed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="instance_guid" xml:space="preserve">
+    <value />
+  </data>
+  <data name="internal_ip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="internal_ips" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ioav" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ipv4_address" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ipv6_address" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ip_address" xml:space="preserve">
+    <value />
+  </data>
+  <data name="last_access" xml:space="preserve">
+    <value />
+  </data>
+  <data name="last_boot" xml:space="preserve">
+    <value />
+  </data>
+  <data name="last_execution" xml:space="preserve">
+    <value />
+  </data>
+  <data name="letter" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Link_speed_(MBit/s)" xml:space="preserve">
+    <value />
+  </data>
+  <data name="location" xml:space="preserve">
+    <value />
+  </data>
+  <data name="logical_processors" xml:space="preserve">
+    <value />
+  </data>
+  <data name="login_as" xml:space="preserve">
+    <value />
+  </data>
+  <data name="low" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mac_address" xml:space="preserve">
+    <value />
+  </data>
+  <data name="manufacturer" xml:space="preserve">
+    <value />
+  </data>
+  <data name="model" xml:space="preserve">
+    <value />
+  </data>
+  <data name="moderate" xml:space="preserve">
+    <value />
+  </data>
+  <data name="modification_date" xml:space="preserve">
+    <value />
+  </data>
+  <data name="move" xml:space="preserve">
+    <value />
+  </data>
+  <data name="move_devices" xml:space="preserve">
+    <value />
+  </data>
+  <data name="name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="network" xml:space="preserve">
+    <value />
+  </data>
+  <data name="network_adapters" xml:space="preserve">
+    <value />
+  </data>
+  <data name="new_directory" xml:space="preserve">
+    <value />
+  </data>
+  <data name="new_file" xml:space="preserve">
+    <value />
+  </data>
+  <data name="next_execution" xml:space="preserve">
+    <value />
+  </data>
+  <data name="note" xml:space="preserve">
+    <value />
+  </data>
+  <data name="notes" xml:space="preserve">
+    <value />
+  </data>
+  <data name="occupied" xml:space="preserve">
+    <value />
+  </data>
+  <data name="occupied_%" xml:space="preserve">
+    <value />
+  </data>
+  <data name="on_access_protection" xml:space="preserve">
+    <value />
+  </data>
+  <data name="os" xml:space="preserve">
+    <value />
+  </data>
+  <data name="output" xml:space="preserve">
+    <value />
+  </data>
+  <data name="parent_name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="path" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Path to the signed product executable" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Path to the signed reporting executable" xml:space="preserve">
+    <value />
+  </data>
+  <data name="platform" xml:space="preserve">
+    <value />
+  </data>
+  <data name="policy" xml:space="preserve">
+    <value />
+  </data>
+  <data name="processes" xml:space="preserve">
+    <value />
+  </data>
+  <data name="processor" xml:space="preserve">
+    <value />
+  </data>
+  <data name="processor_id" xml:space="preserve">
+    <value />
+  </data>
+  <data name="process_cpu_usage_%" xml:space="preserve">
+    <value />
+  </data>
+  <data name="process_ram_usage_%" xml:space="preserve">
+    <value />
+  </data>
+  <data name="process_ram_usage_mb" xml:space="preserve">
+    <value />
+  </data>
+  <data name="product_state" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ram" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ram_available_mb" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ram_in_cache_mb" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ram_not_outsources_pool_mb" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ram_outsourced_pool_mb" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ram_reserved_for_hardware_mb" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ready" xml:space="preserve">
+    <value />
+  </data>
+  <data name="read_operations" xml:space="preserve">
+    <value />
+  </data>
+  <data name="read_transfer" xml:space="preserve">
+    <value />
+  </data>
+  <data name="real_time_protection" xml:space="preserve">
+    <value />
+  </data>
+  <data name="receive_kbits" xml:space="preserve">
+    <value />
+  </data>
+  <data name="refresh" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rename" xml:space="preserve">
+    <value />
+  </data>
+  <data name="reported_by" xml:space="preserve">
+    <value />
+  </data>
+  <data name="reset" xml:space="preserve">
+    <value />
+  </data>
+  <data name="result" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rows_per_page" xml:space="preserve">
+    <value />
+  </data>
+  <data name="save" xml:space="preserve">
+    <value />
+  </data>
+  <data name="search" xml:space="preserve">
+    <value />
+  </data>
+  <data name="security" xml:space="preserve">
+    <value />
+  </data>
+  <data name="send_kbits" xml:space="preserve">
+    <value />
+  </data>
+  <data name="serial_number" xml:space="preserve">
+    <value />
+  </data>
+  <data name="service" xml:space="preserve">
+    <value />
+  </data>
+  <data name="services" xml:space="preserve">
+    <value />
+  </data>
+  <data name="service_name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="severity" xml:space="preserve">
+    <value />
+  </data>
+  <data name="size_gb" xml:space="preserve">
+    <value />
+  </data>
+  <data name="slots" xml:space="preserve">
+    <value />
+  </data>
+  <data name="slots_used" xml:space="preserve">
+    <value />
+  </data>
+  <data name="socket_designation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="software" xml:space="preserve">
+    <value />
+  </data>
+  <data name="speed_mhz" xml:space="preserve">
+    <value />
+  </data>
+  <data name="start" xml:space="preserve">
+    <value />
+  </data>
+  <data name="start_type" xml:space="preserve">
+    <value />
+  </data>
+  <data name="stop" xml:space="preserve">
+    <value />
+  </data>
+  <data name="subnet_mask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sub_category" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tamper_protection" xml:space="preserve">
+    <value />
+  </data>
+  <data name="task_scheduler" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tenant" xml:space="preserve">
+    <value />
+  </data>
+  <data name="timestamp" xml:space="preserve">
+    <value />
+  </data>
+  <data name="timezone" xml:space="preserve">
+    <value />
+  </data>
+  <data name="time_span" xml:space="preserve">
+    <value />
+  </data>
+  <data name="title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="type" xml:space="preserve">
+    <value />
+  </data>
+  <data name="unauthorize" xml:space="preserve">
+    <value />
+  </data>
+  <data name="unauthorized_devices" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uninstall" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uninstallation_command" xml:space="preserve">
+    <value />
+  </data>
+  <data name="user" xml:space="preserve">
+    <value />
+  </data>
+  <data name="user_sid" xml:space="preserve">
+    <value />
+  </data>
+  <data name="utilization" xml:space="preserve">
+    <value />
+  </data>
+  <data name="virtualization" xml:space="preserve">
+    <value />
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value />
+  </data>
+  <data name="write_operations" xml:space="preserve">
+    <value />
+  </data>
+  <data name="write_transfer" xml:space="preserve">
+    <value />
+  </data>
+  <data name="authorize" xml:space="preserve">
+    <value />
+  </data>
+  <data name="membership_hard_limit_reached" xml:space="preserve">
+    <value />
+  </data>
+  <data name="your configured limit is" xml:space="preserve">
+    <value />
+  </data>
+  <data name="and_you_currently_have" xml:space="preserve">
+    <value />
+  </data>
+  <data name="active_devices" xml:space="preserve">
+    <value />
+  </data>
+  <data name="please_remove_or_increase_memberships_limit" xml:space="preserve">
+    <value />
+  </data>
+</root>
