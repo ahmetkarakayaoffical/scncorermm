@@ -1,4 +1,4 @@
-﻿namespace NetLock_RMM_Web_Console.Classes.MySQL
+﻿namespace scncore_rmm_web_console.Classes.MySQL
 {
     public class Config
     {

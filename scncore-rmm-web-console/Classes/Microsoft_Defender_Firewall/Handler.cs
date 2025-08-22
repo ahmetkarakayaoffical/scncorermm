@@ -1,7 +1,7 @@
 ﻿using NetFwTypeLib;
 using System.Runtime.InteropServices;
 
-namespace NetLock_RMM_Web_Console
+namespace scncore_rmm_web_console
 {
     public class Microsoft_Defender_Firewall
     {

@@ -1,5 +1,5 @@
-﻿using NetLock_RMM_Web_Console;
-using NetLock_RMM_Web_Console.Configuration;
+﻿using scncore_rmm_web_console;
+using scncore_rmm_web_console.Configuration;
 using System.Configuration;
 using System.Text.Json;
 

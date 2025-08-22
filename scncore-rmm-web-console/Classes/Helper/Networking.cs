@@ -4,7 +4,7 @@ using System.Net;
 using System.Text;
 using System.Text.Json;
 
-namespace NetLock_RMM_Web_Console.Classes.Helper
+namespace scncore_rmm_web_console.Classes.Helper
 {
     public class Networking
     {

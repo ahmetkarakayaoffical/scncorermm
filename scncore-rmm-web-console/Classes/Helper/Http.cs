@@ -1,8 +1,8 @@
-﻿using static NetLock_RMM_Web_Console.Components.Pages.Collections.Scripts.Manage_Scripts;
+﻿using static scncore_rmm_web_console.Components.Pages.Collections.Scripts.Manage_Scripts;
 using System.Net.Http.Headers;
 using System.Text.Json;
 
-namespace NetLock_RMM_Web_Console.Classes.Helper
+namespace scncore_rmm_web_console.Classes.Helper
 {
     public class Http
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace NetLock_RMM_Web_Console.Classes.Setup
+namespace scncore_rmm_web_console.Classes.Setup
 {
     public class Directories
     {

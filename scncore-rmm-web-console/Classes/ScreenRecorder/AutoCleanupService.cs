@@ -7,7 +7,7 @@ using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace NetLock_RMM_Web_Console.Classes.ScreenRecorder
+namespace scncore_rmm_web_console.Classes.ScreenRecorder
 {
     public class AutoCleanupService : BackgroundService
     {

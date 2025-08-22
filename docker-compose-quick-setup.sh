@@ -28,6 +28,7 @@ IpWhitelist=()
 web_console_title="scncore-rmm"
 apiKeyOverride=""
 
+
 cat << "EOF"
 //  
   _____                      _                     _____  _____ __  __ __  __ 
@@ -150,7 +151,7 @@ fi
 echo ""
 
 # Ask the user for the MySQL root password
-read -p "Please enter the MySQL root password (will be used for NetLock RMM): " mysql_password
+read -p "Please enter the MySQL root password (will be used for scncore-rmm): " mysql_password
 if [[ -z "$mysql_password" ]]; then
     echo "No MySQL password entered. Exiting."
     exit 1
@@ -248,8 +249,7 @@ done
 
 echo ""
 
-# Let the user enter their main domain (Please enter your domain you will use for NetLock RMM. NOT YOUR SUBDOMAIN!!! Example: netlockrmm.com)
-read -p "Please enter the domain (NOT SUBDOMAIN) you will use (example: netlockrmm.com). The subdomains to be created will be displayed afterwards: " le_domain
+read -p "Please enter the domain (NOT SUBDOMAIN) you will use (example: scncore-rmm.com). The subdomains to be created will be displayed afterwards: " le_domain
 if [[ -z "$le_domain" ]]; then
     echo "No domain entered. Exiting."
     exit 1
@@ -682,11 +682,12 @@ echo "docker-compose.yml created in /home/netlock"
 
 echo ""
 
-read -p "Everything seems to be ready. Startup NetLock RMM containers now? (Y/n): " start_now
+read -p "Everything seems to be ready. Startup scncore-rmm containers now? (Y/n): " start_now
 start_now=${start_now:-Y}
 
+
 if [[ "$start_now" =~ ^[Yy]$ ]]; then
-    echo "Starting NetLock containers..."
+    echo "Starting scncore-rmm containers..."
     sudo docker compose -f /home/netlock/docker-compose.yml up -d
 else
     echo "You can start it later with:"
@@ -706,8 +707,8 @@ fi
 echo "Depending on your setup, it might take a few minutes until the web console & server is available."
 echo ""
 echo "If you have any issues, please check the logs with:"
-echo "   sudo docker logs netlock-web-console"
-echo "   sudo docker logs netlock-rmm-server"
+echo "   sudo docker logs scncore-rmm-web-console"
+echo "   sudo docker logs scncore-rmm-server"
 echo ""
 echo "If you need help, please join our Discord server: https://discord.gg/HqUpZgtX4U"
 echo "If you are a business and need support with your setup, please contact us at: support@0x101-cyber-security.de"
