@@ -449,16 +449,16 @@ echo "Starting the setup process..."
 echo "Create directories..."
 
 # Directories
-sudo mkdir -p /home/netlock/{mysql/data,letsencrypt,web_console/internal,web_console/logs,server/logs,server/files,server/internal}
+sudo mkdir -p /home/scncore/{mysql/data,letsencrypt,web_console/internal,web_console/logs,server/logs,server/files,server/internal}
 
 # Create empty appsettings files
-sudo touch /home/netlock/web_console/appsettings.json
-sudo touch /home/netlock/server/appsettings.json
+sudo touch /home/scncore/web_console/appsettings.json
+sudo touch /home/scncore/server/appsettings.json
 
 echo "Creating web console appsettings.json..."
 
 # Write appsettings.json for Web Console (correct path!)
-sudo tee /home/netlock/web_console/appsettings.json > /dev/null <<EOF
+sudo tee /home/scncore/web_console/appsettings.json > /dev/null <<EOF
 {
   "Logging": {
     "LogLevel": {
@@ -493,20 +493,20 @@ sudo tee /home/netlock/web_console/appsettings.json > /dev/null <<EOF
     "IpWhitelist": $ip_whitelist_json,
     "KnownProxies": $known_proxies_json
   },
-  "NetLock_Remote_Server": {
-    "Server": "netlock-rmm-server",
+  "scncore_Remote_Server": {
+    "Server": "scncore-rmm-server",
     "Port": $web_console_server_port,
     "UseSSL": false
   },
-  "NetLock_File_Server": {
-    "Server": "netlock-rmm-server",
+  "scncore_File_Server": {
+    "Server": "scncore-rmm-server",
     "Port": $web_console_server_port,
     "UseSSL": false
   },
   "MySQL": {
     "Server": "mysql8-container",
     "Port": 3306,
-    "Database": "netlock",
+    "Database": "scncore",
     "User": "root",
     "Password": "$mysql_password",
     "SslMode": "None",
@@ -540,7 +540,7 @@ echo "appsettings.json for web console was created."
 
 echo "Creating server appsettings.json..."
 
-sudo tee /home/netlock/server/appsettings.json > /dev/null <<EOF
+sudo tee /home/scncore/server/appsettings.json > /dev/null <<EOF
 {
   "Logging": {
     "LogLevel": {
@@ -587,7 +587,7 @@ sudo tee /home/netlock/server/appsettings.json > /dev/null <<EOF
   "MySQL": {
     "Server": "mysql8-container",
     "Port": 3306,
-    "Database": "netlock",
+    "Database": "scncore",
     "User": "root",
     "Password": "$mysql_password",
     "SslMode": "None",
@@ -616,69 +616,69 @@ EOF
 echo "appsettings.json for server created."
 
 # Create docker compose yml
-sudo touch /home/netlock/docker-compose.yml
+sudo touch /home/scncore/docker-compose.yml
 
-sudo tee /home/netlock/docker-compose.yml > /dev/null <<EOF
+sudo tee /home/scncore/docker-compose.yml > /dev/null <<EOF
 services:
   mysql:
     image: mysql:8.0
     container_name: mysql8-container
     environment:
       MYSQL_ROOT_PASSWORD: "$mysql_password"
-      MYSQL_DATABASE: netlock
+      MYSQL_DATABASE: scncore
     volumes:
-      - /home/netlock/mysql/data:/var/lib/mysql
+      - /home/scncore/mysql/data:/var/lib/mysql
       - /etc/localtime:/etc/localtime:ro
     ports:
       - "3306:3306"
     networks:
-      - netlock-network
+      - scncore-network
     restart: always
     command: --skip-log-bin
 
-  netlock-web-console:
-    image: nicomak101/netlock-rmm-web-console:latest
-    container_name: netlock-web-console
+  scncore-web-console:
+    image: nicomak101/scncore-rmm-web-console:latest
+    container_name: scncore-web-console
     environment:
       - TZ=$timezone
     volumes:
-      - "/home/netlock/web_console/appsettings.json:/app/appsettings.json"
-      - "/home/netlock/web_console/internal:/app/internal"
-      - "/home/netlock/web_console/logs:/var/0x101 Cyber Security/NetLock RMM/Web Console/"
-      - "/home/netlock/letsencrypt:/app/letsencrypt"
+      - "/home/scncore/web_console/appsettings.json:/app/appsettings.json"
+      - "/home/scncore/web_console/internal:/app/internal"
+      - "/home/scncore/web_console/logs:/var/0x101 Cyber Security/scncore RMM/Web Console/"
+      - "/home/scncore/letsencrypt:/app/letsencrypt"
       - /etc/localtime:/etc/localtime:ro
     ports:
       - "80:80"
       - "443:443"
     networks:
-      - netlock-network
+      - scncore-network
     restart: always
 
-  netlock-rmm-server:
-    image: nicomak101/netlock-rmm-server:latest
-    container_name: netlock-rmm-server
+  scncore-rmm-server:
+    image: nicomak101/scncore-rmm-server:latest
+    container_name: scncore-rmm-server
     environment:
       - TZ=$timezone
     volumes:
-      - "/home/netlock/server/appsettings.json:/app/appsettings.json"
-      - "/home/netlock/server/internal:/app/internal"
-      - "/home/netlock/server/files:/app/www/private/files"
-      - "/home/netlock/server/logs:/var/0x101 Cyber Security/NetLock RMM/Server/"
-      - "/home/netlock/letsencrypt:/app/letsencrypt"
+      - "/home/scncore/server/appsettings.json:/app/appsettings.json"
+      - "/home/scncore/server/internal:/app/internal"
+      - "/home/scncore/server/files:/app/www/private/files"
+      - "/home/scncore/server/logs:/var/0x101 Cyber Security/scncore RMM/Server/"
+      - "/home/scncore/letsencrypt:/app/letsencrypt"
       - /etc/localtime:/etc/localtime:ro
     ports:
       - "7080:7080"
       - "7443:7443"
     networks:
-      - netlock-network
+      - scncore-network
     restart: always
 
 networks:
-  netlock-network:
+  scncore-network:
     driver: bridge
 EOF
 
-echo "docker-compose.yml created in /home/netlock"
+echo "docker-compose.yml created in /home/scncore"
 
 echo ""
 
@@ -688,10 +688,10 @@ start_now=${start_now:-Y}
 
 if [[ "$start_now" =~ ^[Yy]$ ]]; then
     echo "Starting scncore-rmm containers..."
-    sudo docker compose -f /home/netlock/docker-compose.yml up -d
+    sudo docker compose -f /home/scncore/docker-compose.yml up -d
 else
     echo "You can start it later with:"
-    echo "   sudo docker compose -f /home/netlock/docker-compose.yml up -d"
+    echo "   sudo docker compose -f /home/scncore/docker-compose.yml up -d"
 fi
 
 echo ""
@@ -699,9 +699,9 @@ echo ""
 echo "You can access the web console at:"
 
 if [[ "$web_console_https_enabled" == true ]]; then
-    echo "  → https://$web_console_domain"
+    echo "  ? https://$web_console_domain"
 else
-    echo "  → http://$web_console_domain"
+    echo "  ? http://$web_console_domain"
 fi
 
 echo "Depending on your setup, it might take a few minutes until the web console & server is available."
