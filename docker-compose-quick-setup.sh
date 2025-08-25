@@ -32,11 +32,7 @@ apiKeyOverride=""
 cat << "EOF"
 //  
   _____                      _                     _____  _____ __  __ __  __ 
- / ____|                    | |                   |  __ \|  __ \  \/  |  \/  |
-| (___   ___  ___ _   _ _ __| |_ _   _ _ __ ___   | |__) | |__) | \  / | \  / |
- \___ \ / _ \/ __| | | | '__| __| | | | '_ ` _ \  |  _  /|  _  /| |\/| | |\/| |
- ____) |  __/ (__| |_| | |  | |_| |_| | | | | | | | | \ \| | \ \| |  | | |  | |
-|_____/ \___|\___|\__,_|_|   \__|\__,_|_| |_| |_| |_|  \_\_|  \_\_|  |_|_|  |_|
+SCN GLOBAL GROUP SOFTWARE 
 EOF
 
 set -e
@@ -644,7 +640,7 @@ services:
     volumes:
       - "/home/scncore/web_console/appsettings.json:/app/appsettings.json"
       - "/home/scncore/web_console/internal:/app/internal"
-      - "/home/scncore/web_console/logs:/var/0x101 Cyber Security/scncore RMM/Web Console/"
+      - "/home/scncore/web_console/logs:/var/SCN-GROUP/scncore RMM/Web Console/"
       - "/home/scncore/letsencrypt:/app/letsencrypt"
       - /etc/localtime:/etc/localtime:ro
     ports:
@@ -663,7 +659,7 @@ services:
       - "/home/scncore/server/appsettings.json:/app/appsettings.json"
       - "/home/scncore/server/internal:/app/internal"
       - "/home/scncore/server/files:/app/www/private/files"
-      - "/home/scncore/server/logs:/var/0x101 Cyber Security/scncore RMM/Server/"
+      - "/home/scncore/server/logs:/var/SCN-GROUP/scncore RMM/Server/"
       - "/home/scncore/letsencrypt:/app/letsencrypt"
       - /etc/localtime:/etc/localtime:ro
     ports:
@@ -688,10 +684,10 @@ start_now=${start_now:-Y}
 
 if [[ "$start_now" =~ ^[Yy]$ ]]; then
     echo "Starting scncore-rmm containers..."
-    sudo docker compose -f /home/scncore/docker-compose.yml up -d
+    sudo docker-compose -f /home/scncore/docker-compose.yml up -d
 else
     echo "You can start it later with:"
-    echo "   sudo docker compose -f /home/scncore/docker-compose.yml up -d"
+    echo "   sudo docker-compose -f /home/scncore/docker-compose.yml up -d"
 fi
 
 echo ""
@@ -711,7 +707,7 @@ echo "   sudo docker logs scncore-rmm-web-console"
 echo "   sudo docker logs scncore-rmm-server"
 echo ""
 echo "If you need help, please join our Discord server: https://discord.gg/HqUpZgtX4U"
-echo "If you are a business and need support with your setup, please contact us at: support@0x101-cyber-security.de"
+echo "If you are a business and need support with your setup, please contact us at: info@scncore.com"
 echo ""
 echo "Default credentials for web console:"
 echo "Username: admin"
