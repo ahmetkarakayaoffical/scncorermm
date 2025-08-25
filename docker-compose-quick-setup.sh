@@ -684,10 +684,10 @@ start_now=${start_now:-Y}
 
 if [[ "$start_now" =~ ^[Yy]$ ]]; then
     echo "Starting scncore-rmm containers..."
-    sudo docker-compose -f /home/scncore/docker-compose.yml up -d
+    sudo docker compose -f /home/scncore/docker-compose.yml up -d
 else
     echo "You can start it later with:"
-    echo "   sudo docker-compose -f /home/scncore/docker-compose.yml up -d"
+    echo "   sudo docker compose -f /home/scncore/docker-compose.yml up -d"
 fi
 
 echo ""
